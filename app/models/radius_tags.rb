@@ -184,7 +184,7 @@ module RadiusTags
       tag.locals.is_first_meta_tag = index == 0
       tag.locals.is_last_meta_tag = index == selected_tags.length - 1
       tag.expand
-    end
+    end.join
   end
   
   tag "tags:each:name" do |tag|
