@@ -141,7 +141,7 @@ module RadiusTags
     output = "<ul class=\"tag_list\">"
     if tag_cloud.length > 0
         build_tag_cloud(tag_cloud, %w(size1 size2 size3 size4 size5 size6 size7 size8 size9)) do |tag, cloud_class, amount|
-          output += "<li class=\"#{cloud_class}\"><a href=\"#{results_page}/#{url_encode(tag)}\" class=\"tag\">#{tag} (#{amount})</a></li>"
+          output += "<li class=\"#{cloud_class}\"><a href=\"#{results_page}/#{url_encode(tag)}\" class=\"tag\">#{tag}<span>(#{amount})</span></a></li>"
         end
     else
         return I18n.t('tags_extension.no_tags_found')
