@@ -47,6 +47,13 @@ class TagSearchPage < Page
     end
   end
 
+  desc %{    Renders the size of the results.}
+  tag 'search:results:size' do |tag|
+    unless found_tags.blank?
+      found_tags.size
+    end
+  end
+
   desc %{    <r:search:results:each [sort_by="id"] [order="asc"]/>
     Renders the contained block for each result page.  The context
     inside the tag refers to the found page. The optional sort_by and order attributes
